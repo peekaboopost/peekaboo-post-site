@@ -9,7 +9,7 @@
 | `clips/peekaboo-post-harvest-reveal.mp4` | Break the seal on a cozy Thanksgiving invite | Now through Nov 26 |
 | `clips/peekaboo-post-newyear-reveal.mp4` | Pop the confetti to open your New Year’s invite | Dec 10 – Dec 31 |
 
-Each clip films a real invite from peekaboopost.com/invites, then ends on the logo card.
+Each clip films a real invite (with friendly sample details: "Hosted by Jamie & Alex, 12 Maple Lane"), scrolls slowly with pauses so every section is readable, then ends on the logo card. Re-filmed Nov 13 with smoother, slower scrolling.
 **Add music inside TikTok/Instagram** from their licensed library when posting. No music is baked in, on purpose.
 
 Captions and posting checklist: see the project doc `plans/2026-11-content-week1.md`.
