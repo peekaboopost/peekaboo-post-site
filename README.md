@@ -12,7 +12,8 @@ Interactive digital invitations that guests love to open. Tap, peek, party!
 | `script.js` | Envelope animation and the signup form |
 | `api/subscribe.js` | Vercel serverless function that saves signups to Supabase |
 | `supabase/schema.sql` | Creates the `waitlist` table in Supabase |
-| `favicon.svg` | Temporary browser-tab icon until the logo is final |
+| `favicon.svg`, `apple-touch-icon.png` | Browser-tab and phone home-screen icons (the stamp logo) |
+| `brand/` | Logo files: stamp icon (SVG, 512px PNG) and a 1080px social profile picture |
 
 No build step and no packages to install. Vercel serves the files as-is.
 
