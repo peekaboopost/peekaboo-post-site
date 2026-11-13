@@ -154,8 +154,30 @@
     for (var j = b.length; j < a.length; j++) live.removeChild(a[j]);
   }
 
+  var wasSubmitted = false;
+
+  // On a customer's invite (pages with <meta name="pp-event">), save each RSVP.
+  function saveRsvp() {
+    var meta = document.querySelector('meta[name="pp-event"]');
+    if (!meta) return; // gallery demos are never saved
+    var details = {};
+    Object.keys(component.state).forEach(function (key) {
+      var value = component.state[key];
+      if (['phase', 'info', 'calOpen', 'error', 'submitted', 'spinning', 'result', 'wall'].indexOf(key) !== -1) return;
+      if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean' || value === null) details[key] = value;
+    });
+    fetch('/api/rsvp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ event: meta.content, invite: document.body.getAttribute('data-invite') || '', details: details })
+    }).catch(function () {});
+  }
+
   function render() {
     scheduled = false;
+    var nowSubmitted = !!(component.state && component.state.submitted);
+    if (nowSubmitted && !wasSubmitted) saveRsvp();
+    wasSubmitted = nowSubmitted;
     var fresh = document.createElement('div');
     build(template.content, component.renderVals() || {}, fresh);
     morphChildren(mount, fresh);
