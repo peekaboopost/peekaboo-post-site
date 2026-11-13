@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/invites/invites.css">
+<title>Evergreen Christmas · Christmas invitation · Peekaboo Post</title>
+<meta name="description" content="A classic Christmas party invite with snow and a wax seal. A tap-to-open digital invitation from Peekaboo Post.">
+<meta property="og:title" content="Evergreen Christmas — a Peekaboo Post invitation">
+<meta property="og:description" content="A classic Christmas party invite with snow and a wax seal.">
+<meta property="og:image" content="https://peekaboopost.com/brand/peekaboo-post-profile-1080.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#9E1B26}a:hover{color:#5E0F17}
+@keyframes fall{0%{transform:translateY(-30px)}100%{transform:translateY(900px)}}
+.flake{position:absolute;top:0;border-radius:50%;background:#FFFFFF;opacity:.85;pointer-events:none;animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+@keyframes reveal{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+.reveal{animation:reveal 1s ease-out both}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.bob{animation:bob 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,246,232,.55)}50%{box-shadow:0 0 0 12px rgba(255,246,232,0)}}
+.pulse{animation:pulse 2s ease-out infinite}
+.env{perspective:900px}
+.flap{position:absolute;left:0;top:0;width:280px;height:120px;background:#E6D8BC;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .8s ease-in-out;z-index:2}
+.flap.is-open{transform:rotateX(180deg);z-index:0}
+.seal{transition:opacity .3s ease,transform .3s ease}
+.seal.is-open{opacity:0;transform:scale(.6)}
+.letter{transition:transform .8s ease-in-out .3s}
+.letter.is-open{transform:translateY(-90px)}
+.scroller{scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body class="pp-page invite-page">
+<header class="pp-bar"><a class="pp-logo" href="/" aria-label="Peekaboo Post home"><img src="/brand/peekaboo-post-icon.svg" alt="" width="40" height="40"><span class="pp-logo-text"><span class="pp-logo-peekaboo">PEEKABOO</span><span class="pp-logo-post">post</span></span></a><nav class="pp-nav" aria-label="Main"><a class="pp-link" href="/invites/">Browse invites</a><a class="pp-button" href="/#signup">Get early access</a></nav></header>
+<main class="stage">
+<div class="frame"><div id="card"></div></div>
+<section class="invite-info" aria-labelledby="invite-title">
+<p class="tag">Christmas</p>
+<h1 id="invite-title">Evergreen Christmas</h1>
+<p>A classic Christmas party invite with snow and a wax seal.</p>
+<ul><li>Snowy envelope reveal</li><li>Live countdown</li><li>Attire, food & gift details</li></ul>
+<p class="hint">Try it — tap to open the invite and RSVP. This is a demo, so nothing you enter is saved.</p>
+<a class="pp-button" href="/#signup" style="align-self: flex-start">Get early access</a>
+</section>
+</main>
+<template id="card-template">
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F3EEE4; font-family: 'Cormorant Garamond', Georgia, serif; color: #2A1A14">
+
+<sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; inset: 0; background: #7A1520; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; text-align: center; padding: 32px; box-sizing: border-box">
+<div class="flake" style="left: 30px; width: 6px; height: 6px; animation-duration: 9s; animation-delay: -1s"></div>
+<div class="flake" style="left: 80px; width: 4px; height: 4px; animation-duration: 12s; animation-delay: -6s"></div>
+<div class="flake" style="left: 140px; width: 7px; height: 7px; animation-duration: 10s; animation-delay: -3s"></div>
+<div class="flake" style="left: 200px; width: 5px; height: 5px; animation-duration: 13s; animation-delay: -8s"></div>
+<div class="flake" style="left: 255px; width: 6px; height: 6px; animation-duration: 11s; animation-delay: -2s"></div>
+<div class="flake" style="left: 310px; width: 4px; height: 4px; animation-duration: 9s; animation-delay: -5s"></div>
+<div class="flake" style="left: 360px; width: 6px; height: 6px; animation-duration: 14s; animation-delay: -10s"></div>
+<p style="margin: 0; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: #F1D9A0">Special delivery</p>
+<p style="margin: -24px 0 0; font-family: 'Pinyon Script', cursive; font-size: 48px; line-height: 1.1; color: #FFF6E8">You’re invited</p>
+<div class="env bob" style="position: relative; width: 280px; height: 180px">
+<div class="letter {{ openClass }}" style="position: absolute; left: 20px; top: 14px; width: 240px; height: 150px; background: #FFFDF7; border: 1px solid #D9C9A6; box-sizing: border-box; display: flex; align-items: flex-start; justify-content: center; padding-top: 18px; z-index: 1">
+<p style="margin: 0; font-family: 'Pinyon Script', cursive; font-size: 30px; color: #9E1B26">Merry Christmas</p>
+</div>
+<div style="position: absolute; inset: 0; background: #EFE4CC; border-radius: 4px; z-index: 1; clip-path: polygon(0 0,50% 58%,100% 0,100% 100%,0 100%)"></div>
+<div class="flap {{ openClass }}"></div>
+<div class="seal {{ openClass }}" style="position: absolute; left: 112px; top: 92px; width: 56px; height: 56px; border-radius: 50%; background: #B3202C; display: flex; align-items: center; justify-content: center; z-index: 3; box-shadow: 0 2px 0 #7A1520">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F1D9A0" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.8 6.2 20l1.4-6.4-4.9-4.4 6.5-.7z"/></svg>
+</div>
+</div>
+<button type="button" class="pulse" onClick="{{ open }}" style="min-height: 48px; padding: 14px 32px; border: 1.5px solid #F1D9A0; border-radius: 999px; background: transparent; color: #FFF6E8; font-family: Lato, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer">Tap to open</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ opened }}" hint-placeholder-val="{{ false }}">
+<div class="scroller reveal" style="position: absolute; inset: 0; overflow-y: auto">
+
+<div style="position: relative; padding: 0 20px 32px; display: flex; flex-direction: column; align-items: center">
+<svg width="390" height="120" viewBox="0 0 390 120" aria-hidden="true" style="display: block; margin: 0 -20px -46px; position: relative; z-index: 2">
+<path d="M0 26 Q195 92 390 26" fill="none" stroke="#2F5D3A" stroke-width="16" stroke-linecap="round"/>
+<g fill="#3E7A4A"><path d="M40 34 q14 -18 30 -6 q-14 16 -30 6z"/><path d="M90 52 q12 -20 30 -10 q-12 18 -30 10z"/><path d="M300 52 q-12 -20 -30 -10 q12 18 30 10z"/><path d="M350 34 q-14 -18 -30 -6 q14 16 30 6z"/></g>
+<g fill="#C8303B"><circle cx="72" cy="44" r="5"/><circle cx="80" cy="50" r="4"/><circle cx="318" cy="44" r="5"/><circle cx="310" cy="50" r="4"/></g>
+<path d="M195 62 q-44 -40 -58 -6 q16 26 58 6z M195 62 q44 -40 58 -6 q-16 26 -58 6z" fill="#B3202C"/>
+<path d="M195 62 l-22 50 l12 -4 l4 10 z M195 62 l22 50 l-12 -4 l-4 10 z" fill="#9E1B26"/>
+<circle cx="195" cy="62" r="11" fill="#7A1520"/>
+<g fill="#D9B65A"><circle cx="160" cy="96" r="9"/><circle cx="230" cy="96" r="9"/></g>
+</svg>
+<div style="width: 100%; box-sizing: border-box; padding: 72px 24px 32px; background: #FFFDF7; border: 3px solid #9E1B26; outline: 1px solid #D9B65A; outline-offset: -9px; border-radius: 170px 170px 18px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+<p style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #2F5D3A">A very merry</p>
+<h1 style="margin: 0; font-family: 'Pinyon Script', cursive; font-size: 66px; line-height: 0.95; font-weight: 400; color: #9E1B26">Christmas<br>Party</h1>
+<p style="margin: 8px 0 0; font-family: Lato, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5444">Hosted by</p>
+<p style="margin: 0; font-size: 24px; font-weight: 700; color: #9E1B26">[Your Name]</p>
+<div style="width: 60px; height: 1px; background: #D9B65A; margin: 8px 0"></div>
+<p style="margin: 0; font-size: 26px; font-weight: 700">{{ dateLabel }}</p>
+<p style="margin: 0; font-family: Lato, sans-serif; font-size: 15px; line-height: 1.5; color: #4A3A30">[Address]<br>[City, State]</p>
+<a href="https://maps.google.com" target="_blank" rel="noopener" style="margin-top: 10px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #9E1B26; color: #FFF6E8; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+Get directions</a>
+<button type="button" onClick="{{ toggleCal }}" aria-expanded="{{ calExpanded }}" style="margin-top: 4px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border: 1.5px solid #9E1B26; border-radius: 999px; background: transparent; color: #9E1B26; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg>
+Add to calendar</button>
+<sc-if value="{{ calOpen }}" hint-placeholder-val="{{ false }}">
+<div class="reveal" style="margin-top: 4px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; width: 100%">
+<a href="{{ cal.google }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #D9C9A6; border-radius: 10px; background: #FFFFFF; color: #9E1B26; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; text-decoration: none">Google</a>
+<button type="button" onClick="{{ cal.ics }}" style="min-height: 44px; border: 1px solid #D9C9A6; border-radius: 10px; background: #FFFFFF; color: #9E1B26; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; cursor: pointer">Apple</button>
+<a href="{{ cal.outlook }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #D9C9A6; border-radius: 10px; background: #FFFFFF; color: #9E1B26; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; text-decoration: none">Outlook</a>
+</div>
+</sc-if>
+</div>
+</div>
+
+<div style="margin: 0 20px 28px; padding: 26px 18px; background: #1F4A2E; border: 2px solid #D9B65A; border-radius: 18px; color: #FFF6E8; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<p style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #F1D9A0">Counting down to the cheer</p>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%">
+<div style="display: flex; flex-direction: column; gap: 2px"><p style="margin: 0; font-family: Lato, sans-serif; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ cd.d }}</p><p style="margin: 0; font-family: Lato, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #CFE0D2">Days</p></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><p style="margin: 0; font-family: Lato, sans-serif; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ cd.h }}</p><p style="margin: 0; font-family: Lato, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #CFE0D2">Hours</p></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><p style="margin: 0; font-family: Lato, sans-serif; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ cd.m }}</p><p style="margin: 0; font-family: Lato, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #CFE0D2">Mins</p></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><p style="margin: 0; font-family: Lato, sans-serif; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ cd.s }}</p><p style="margin: 0; font-family: Lato, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #CFE0D2">Secs</p></div>
+</div>
+</div>
+
+<div style="margin: 0 20px 28px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #2F5D3A">The details</p>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{ infos }}" as="item" hint-placeholder-count="4">
+<button type="button" onClick="{{ item.pick }}" aria-pressed="{{ item.pressed }}" style="min-height: 76px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 10px 4px; border: 1.5px solid #9E1B26; border-radius: 14px; background: {{ item.bg }}; color: {{ item.fg }}; font-family: Lato, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ item.icon }}"/></svg>
+{{ item.label }}</button>
+</sc-for>
+</div>
+<div style="padding: 18px 20px; background: #FFFDF7; border: 1px solid #D9C9A6; border-radius: 14px; text-align: center; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 22px; font-weight: 700; color: #9E1B26">{{ active.title }}</p>
+<p style="margin: 0; font-family: Lato, sans-serif; font-size: 15px; line-height: 1.55; color: #4A3A30">{{ active.text }}</p>
+</div>
+</div>
+
+<div style="margin: 0 20px 40px; padding: 28px 20px; background: #FFFDF7; border: 3px solid #9E1B26; border-radius: 18px; display: flex; flex-direction: column; gap: 16px">
+<sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-family: 'Pinyon Script', cursive; font-size: 52px; font-weight: 400; line-height: 1; color: #9E1B26">Kindly RSVP</h2>
+<p style="margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #2F5D3A">by [RSVP date]</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="rsvp-name" style="font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; color: #4A3A30">Your name</label>
+<input id="rsvp-name" type="text" value="{{ name }}" onInput="{{ setName }}" placeholder="First and last name" style="min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #BFAE8C; border-radius: 10px; background: #FFFFFF; font-family: Lato, sans-serif; font-size: 16px; color: #2A1A14">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; color: #4A3A30">Are you coming?</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{ sayYes }}" aria-pressed="{{ yesPressed }}" style="min-height: 44px; padding: 10px; border: 1.5px solid #2F5D3A; border-radius: 10px; background: {{ yesBg }}; color: {{ yesFg }}; font-family: Lato, sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">Yes, I’ll be there</button>
+<button type="button" onClick="{{ sayNo }}" aria-pressed="{{ noPressed }}" style="min-height: 44px; padding: 10px; border: 1.5px solid #6B5444; border-radius: 10px; background: {{ noBg }}; color: {{ noFg }}; font-family: Lato, sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">Can’t make it</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="rsvp-guests" style="font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; color: #4A3A30">Number of guests (including you)</label>
+<input id="rsvp-guests" type="number" min="1" max="10" value="{{ guests }}" onInput="{{ setGuests }}" style="min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #BFAE8C; border-radius: 10px; background: #FFFFFF; font-family: Lato, sans-serif; font-size: 16px; color: #2A1A14">
+</div>
+<sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; font-family: Lato, sans-serif; font-size: 14px; color: #9E1B26">{{ error }}</p>
+</sc-if>
+<button type="button" onClick="{{ submit }}" style="min-height: 48px; padding: 12px; border: none; border-radius: 999px; background: #1F4A2E; color: #FFF6E8; font-family: Lato, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Send my RSVP</button>
+</div>
+</sc-if>
+<sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; padding: 12px 0">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2F5D3A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+<h2 style="margin: 0; font-family: 'Pinyon Script', cursive; font-size: 48px; font-weight: 400; line-height: 1; color: #9E1B26">{{ thanksTitle }}</h2>
+<p style="margin: 0; font-family: Lato, sans-serif; font-size: 15px; line-height: 1.55; color: #4A3A30">{{ thanksText }}</p>
+<button type="button" onClick="{{ edit }}" style="min-height: 44px; padding: 10px 20px; border: 1px solid #9E1B26; border-radius: 999px; background: transparent; color: #9E1B26; font-family: Lato, sans-serif; font-size: 13px; font-weight: 700; cursor: pointer">Change my answer</button>
+</div>
+</sc-if>
+</div>
+
+<p style="margin: 0 0 36px; text-align: center; font-family: 'Pinyon Script', cursive; font-size: 30px; color: #2F5D3A">See you under the mistletoe</p>
+<p style="margin: 0 0 40px; text-align: center; font-size: 14px; font-weight: 600; color: #2F5D3A">Made with <a href="https://peekaboopost.com" target="_blank" rel="noopener" style="color: #2F5D3A; text-decoration: underline">Peekaboo Post</a> · Make your own invite</p>
+</div>
+</sc-if>
+</div>
+</template>
+<script type="application/json" id="card-props">{"eventDate":{"editor":"text","default":"2026-12-19T18:00"},"$preview":{"width":390,"height":844}}</script>
+<script type="text/x-card" id="card-logic">
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { phase: 'closed', info: 'attire', name: '', attending: null, guests: '1', submitted: false, error: '' };
+}
+componentDidMount() {
+this.timer = setInterval(() => this.forceUpdate(), 1000);
+}
+componentWillUnmount() {
+clearInterval(this.timer);
+clearTimeout(this.openTimer);
+}
+calendar(title, details, fallback) {
+const pad = (n) => String(n).padStart(2, '0');
+const start = new Date(this.props.eventDate ?? fallback);
+if (isNaN(start.getTime())) return { google: '#', outlook: '#', ics: () => {} };
+const end = new Date(start.getTime() + 3 * 3600000);
+const stamp = (d) => '' + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + 'T' + pad(d.getHours()) + pad(d.getMinutes()) + '00';
+const iso = (d) => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':00';
+const where = '[Address]';
+const e = encodeURIComponent;
+return {
+google: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + e(title) + '&dates=' + stamp(start) + '/' + stamp(end) + '&details=' + e(details) + '&location=' + e(where),
+outlook: 'https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=' + e(title) + '&startdt=' + e(iso(start)) + '&enddt=' + e(iso(end)) + '&body=' + e(details) + '&location=' + e(where),
+ics: () => {
+const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Digital Invitations//EN', 'BEGIN:VEVENT', 'UID:' + stamp(start) + '-' + Math.random().toString(36).slice(2) + '@invite', 'DTSTAMP:' + now, 'DTSTART:' + stamp(start), 'DTEND:' + stamp(end), 'SUMMARY:' + title, 'DESCRIPTION:' + details, 'LOCATION:' + where, 'END:VEVENT', 'END:VCALENDAR'];
+try {
+const url = URL.createObjectURL(new Blob([lines.join('\r\n')], { type: 'text/calendar' }));
+const a = document.createElement('a'); a.href = url; a.download = 'invitation.ics'; a.click();
+setTimeout(() => URL.revokeObjectURL(url), 3000);
+} catch (err) {}
+}
+};
+}
+renderVals() {
+const s = this.state;
+const raw = this.props.eventDate ?? '2026-12-19T18:00';
+const when = new Date(raw);
+const valid = !isNaN(when.getTime());
+let diff = valid ? Math.max(0, when.getTime() - Date.now()) : 0;
+const pad = (n) => String(n).padStart(2, '0');
+const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+const h = Math.floor(diff / 3600000); diff -= h * 3600000;
+const m = Math.floor(diff / 60000); diff -= m * 60000;
+const sec = Math.floor(diff / 1000);
+const dateLabel = valid
+? when.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) + ' · ' + when.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })
+: '[Date] · [Time]';
+const infoData = [
+{ id: 'attire', label: 'Attire', title: 'What to wear', text: 'Holiday best — velvet, plaid or your most festive sweater.', icon: 'M8 3l4 3 4-3 5 4-3 4-2-1v11H8V10l-2 1-3-4z' },
+{ id: 'food', label: 'Food', title: 'On the menu', text: 'A holiday dinner buffet, hot cocoa bar and a dessert table.', icon: 'M5 11h14a7 7 0 0 1-14 0zM12 3v5M8 5v3M16 5v3' },
+{ id: 'bring', label: 'Bring', title: 'What to bring', text: 'Just yourselves — or a plate of cookies for the cookie swap.', icon: 'M6 8h12l-1 12H7zM9 8a3 3 0 0 1 6 0' },
+{ id: 'gifts', label: 'Gifts', title: 'Gift exchange', text: 'Optional: bring a wrapped gift around $20 to join the swap.', icon: 'M4 10h16v10H4zM3 7h18v3H3zM12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0' }
+];
+const infos = infoData.map((x) => {
+const on = s.info === x.id;
+return { ...x, pressed: on ? 'true' : 'false', bg: on ? '#9E1B26' : '#FFFDF7', fg: on ? '#FFF6E8' : '#9E1B26', pick: () => this.setState({ info: x.id }) };
+});
+const active = infoData.find((x) => x.id === s.info) || infoData[0];
+const yes = s.attending === 'yes', no = s.attending === 'no';
+const first = (s.name || '').trim().split(' ')[0];
+return {
+closed: s.phase !== 'open',
+opened: s.phase === 'open',
+openClass: s.phase === 'closed' ? '' : 'is-open',
+open: () => {
+if (s.phase !== 'closed') return;
+this.setState({ phase: 'opening' });
+this.openTimer = setTimeout(() => this.setState({ phase: 'open' }), 1300);
+},
+dateLabel,
+cal: this.calendar('Christmas Party', 'A very merry Christmas party hosted by [Your Name].', '2026-12-19T18:00'),
+calOpen: !!s.calOpen, calExpanded: s.calOpen ? 'true' : 'false',
+toggleCal: () => this.setState({ calOpen: !s.calOpen }),
+cd: { d: pad(d), h: pad(h), m: pad(m), s: pad(sec) },
+infos, active,
+name: s.name, guests: s.guests,
+setName: (e) => this.setState({ name: e.target.value, error: '' }),
+setGuests: (e) => this.setState({ guests: e.target.value }),
+sayYes: () => this.setState({ attending: 'yes', error: '' }),
+sayNo: () => this.setState({ attending: 'no', error: '' }),
+yesPressed: yes ? 'true' : 'false', noPressed: no ? 'true' : 'false',
+yesBg: yes ? '#2F5D3A' : '#FFFFFF', yesFg: yes ? '#FFFFFF' : '#2F5D3A',
+noBg: no ? '#6B5444' : '#FFFFFF', noFg: no ? '#FFFFFF' : '#6B5444',
+error: s.error,
+submit: () => {
+if (!s.name.trim()) return this.setState({ error: 'Please add your name.' });
+if (!s.attending) return this.setState({ error: 'Let us know if you can make it.' });
+this.setState({ submitted: true, error: '' });
+},
+edit: () => this.setState({ submitted: false }),
+submitted: s.submitted,
+notSubmitted: !s.submitted,
+thanksTitle: yes ? 'Hooray!' : 'We’ll miss you',
+thanksText: yes
+? 'Thanks' + (first ? ', ' + first : '') + '! We’ve saved ' + (s.guests || '1') + ' spot' + (s.guests === '1' ? '' : 's') + ' for you.'
+: 'Thanks for letting us know' + (first ? ', ' + first : '') + '. Merry Christmas from all of us!'
+};
+}
+}
+</script>
+<script src="/invites/invite.js"></script>
+</body>
+</html>

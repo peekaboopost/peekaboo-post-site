@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/invites/invites.css">
+<title>Christmas Cute Crew · Christmas invitation · Peekaboo Post</title>
+<meta name="description" content="Pull the ribbon and Ginger pops out of the gift box. A tap-to-open digital invitation from Peekaboo Post.">
+<meta property="og:title" content="Christmas Cute Crew — a Peekaboo Post invitation">
+<meta property="og:description" content="Pull the ribbon and Ginger pops out of the gift box.">
+<meta property="og:image" content="https://peekaboopost.com/brand/peekaboo-post-profile-1080.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#4A2A1A}a:hover{color:#000000}
+@keyframes reveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.reveal{animation:reveal .9s ease-out both}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-8px) rotate(var(--r,0deg))}}
+.bob{animation:bob 2.6s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0) scale(1,1)}30%{transform:translateY(0) scale(1.06,.94)}55%{transform:translateY(-16px) scale(.97,1.04)}80%{transform:translateY(0) scale(1.04,.96)}}
+.hop{animation:hop 1.8s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-30deg)}}
+.wave{animation:wave .9s ease-in-out infinite;transform-box:fill-box;transform-origin:90% 50%}
+@keyframes blink{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+.blink{animation:blink 4s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes jiggle{0%,100%{transform:rotate(0)}20%{transform:rotate(-4deg)}40%{transform:rotate(4deg)}60%{transform:rotate(-2deg)}}
+.jiggle{animation:jiggle 1.8s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes fall{0%{transform:translateY(-30px)}100%{transform:translateY(900px)}}
+.flake{position:absolute;top:0;border-radius:50%;background:#FFFFFF;pointer-events:none;animation:fall linear infinite}
+.bow{transition:transform .7s cubic-bezier(.4,-.4,.4,1),opacity .4s ease .3s}
+.bow.is-open{transform:translate(120px,-300px) rotate(200deg);opacity:0}
+.boxlid{transition:transform .8s cubic-bezier(.4,-.5,.4,1) .3s,opacity .4s ease .9s}
+.boxlid.is-open{transform:translate(-90px,-260px) rotate(-35deg);opacity:0}
+.popper{opacity:0;transform:translateY(80px) scale(.6);transition:transform .7s cubic-bezier(.3,1.6,.5,1) .7s,opacity .3s ease .7s}
+.popper.is-open{opacity:1;transform:none}
+.bubble{opacity:0;transform:scale(.5);transform-origin:20% 100%;transition:transform .4s cubic-bezier(.3,1.6,.5,1) 1.2s,opacity .2s ease 1.2s}
+.bubble.is-open{opacity:1;transform:none}
+.hideopen{transition:opacity .3s ease}
+.hideopen.is-open{opacity:0}
+.scroller{scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body class="pp-page invite-page">
+<header class="pp-bar"><a class="pp-logo" href="/" aria-label="Peekaboo Post home"><img src="/brand/peekaboo-post-icon.svg" alt="" width="40" height="40"><span class="pp-logo-text"><span class="pp-logo-peekaboo">PEEKABOO</span><span class="pp-logo-post">post</span></span></a><nav class="pp-nav" aria-label="Main"><a class="pp-link" href="/invites/">Browse invites</a><a class="pp-button" href="/#signup">Get early access</a></nav></header>
+<main class="stage">
+<div class="frame"><div id="card"></div></div>
+<section class="invite-info" aria-labelledby="invite-title">
+<p class="tag">Christmas</p>
+<h1 id="invite-title">Christmas Cute Crew</h1>
+<p>Pull the ribbon and Ginger pops out of the gift box.</p>
+<ul><li>Unwrap-the-gift reveal</li><li>“Sleeps to go” countdown</li><li>Secret Santa sign-up</li></ul>
+<p class="hint">Try it — tap to open the invite and RSVP. This is a demo, so nothing you enter is saved.</p>
+<a class="pp-button" href="/#signup" style="align-self: flex-start">Get early access</a>
+</section>
+</main>
+<template id="card-template">
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: {{ accent }}; font-family: Fredoka, sans-serif; color: #4A2A1A">
+<div class="flake" style="left: 24px; width: 8px; height: 8px; animation-duration: 10s; animation-delay: -2s"></div>
+<div class="flake" style="left: 96px; width: 5px; height: 5px; animation-duration: 13s; animation-delay: -7s"></div>
+<div class="flake" style="left: 170px; width: 7px; height: 7px; animation-duration: 11s; animation-delay: -4s"></div>
+<div class="flake" style="left: 250px; width: 6px; height: 6px; animation-duration: 14s; animation-delay: -9s"></div>
+<div class="flake" style="left: 330px; width: 8px; height: 8px; animation-duration: 12s; animation-delay: -1s"></div>
+<div class="flake" style="left: 368px; width: 5px; height: 5px; animation-duration: 15s; animation-delay: -11s"></div>
+
+<sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; text-align: center; padding: 32px; box-sizing: border-box">
+<p class="hideopen {{ openClass }}" style="margin: 0; padding: 8px 16px; background: #FFFFFF; border: 2.5px solid #4A2A1A; border-radius: 999px; font-size: 15px; font-weight: 600; transform: rotate(-3deg)">a little gift, just for you</p>
+<h1 class="hideopen {{ openClass }}" style="margin: 0; font-size: 50px; line-height: 0.95; font-weight: 700">Unwrap your<br>invitation</h1>
+<div style="position: relative; width: 300px; height: 300px">
+<div class="bubble {{ openClass }}" style="position: absolute; left: 160px; top: 0; padding: 10px 14px; background: #FFFFFF; border: 2.5px solid #4A2A1A; border-radius: 18px 18px 18px 4px; font-size: 18px; font-weight: 700; line-height: 1.15; text-align: left; z-index: 4">Ho ho hello!<br>You’re invited!</div>
+<div class="popper {{ openClass }}" style="position: absolute; left: 80px; top: 30px; z-index: 1">
+<svg width="140" height="160" viewBox="0 0 140 160" aria-hidden="true">
+<g stroke="#4A2A1A" stroke-width="2.5" stroke-linejoin="round" fill="#C8814A">
+<rect class="wave" x="10" y="66" width="42" height="20" rx="10" transform="rotate(-25 31 76)"/>
+<rect x="88" y="66" width="42" height="20" rx="10" transform="rotate(20 109 76)"/>
+<rect x="40" y="112" width="22" height="42" rx="11" transform="rotate(12 51 133)"/>
+<rect x="78" y="112" width="22" height="42" rx="11" transform="rotate(-12 89 133)"/>
+<rect x="40" y="58" width="60" height="66" rx="26"/>
+<circle cx="70" cy="38" r="28"/>
+</g>
+<g fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"><path d="M14 66 q4 4 0 10 M126 74 q-4 4 0 10 M40 146 q6 3 12 0 M86 146 q6 3 12 0"/></g>
+<circle cx="70" cy="76" r="5" fill="#D23B4A" stroke="#4A2A1A" stroke-width="1.6"/><circle cx="70" cy="94" r="5" fill="#3F8F5F" stroke="#4A2A1A" stroke-width="1.6"/>
+<g class="blink"><circle cx="60" cy="34" r="4" fill="#2A1408"/><circle cx="80" cy="34" r="4" fill="#2A1408"/><circle cx="61.4" cy="32.6" r="1.3" fill="#FFFFFF"/><circle cx="81.4" cy="32.6" r="1.3" fill="#FFFFFF"/></g>
+<ellipse cx="52" cy="44" rx="5" ry="3" fill="#F28B9B"/><ellipse cx="88" cy="44" rx="5" ry="3" fill="#F28B9B"/>
+<path d="M62 46 q8 8 16 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+<path d="M50 20 q20 -14 40 0" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 5"/>
+</svg>
+</div>
+<svg width="220" height="140" viewBox="0 0 220 140" aria-hidden="true" style="position: absolute; left: 40px; bottom: 10px; z-index: 2">
+<rect x="10" y="10" width="200" height="126" rx="10" fill="#D23B4A" stroke="#4A2A1A" stroke-width="3"/>
+<rect x="96" y="10" width="28" height="126" fill="#F6E7A8" stroke="#4A2A1A" stroke-width="2.5"/>
+<g fill="#FFFFFF" opacity=".55"><circle cx="40" cy="44" r="6"/><circle cx="66" cy="96" r="6"/><circle cx="156" cy="50" r="6"/><circle cx="184" cy="104" r="6"/></g>
+</svg>
+<div class="boxlid {{ openClass }}" style="position: absolute; left: 30px; bottom: 132px; z-index: 3">
+<svg width="240" height="44" viewBox="0 0 240 44" aria-hidden="true"><rect x="2" y="4" width="236" height="38" rx="10" fill="#E8505E" stroke="#4A2A1A" stroke-width="3"/><rect x="106" y="4" width="28" height="38" fill="#F6E7A8" stroke="#4A2A1A" stroke-width="2.5"/></svg>
+</div>
+<div class="bow {{ openClass }}" style="position: absolute; left: 100px; bottom: 160px; z-index: 4">
+<svg class="jiggle" width="100" height="64" viewBox="0 0 100 64" aria-hidden="true"><g stroke="#4A2A1A" stroke-width="2.5" fill="#F6E7A8"><path d="M50 40 C20 2 2 20 12 40 C20 56 40 48 50 40Z"/><path d="M50 40 C80 2 98 20 88 40 C80 56 60 48 50 40Z"/><circle cx="50" cy="40" r="10" fill="#F2C94C"/></g></svg>
+</div>
+</div>
+<button type="button" class="hideopen {{ openClass }}" onClick="{{ open }}" style="min-height: 52px; padding: 14px 34px; border: 3px solid #4A2A1A; border-radius: 999px; background: #3F8F5F; color: #FFFFFF; font-family: Fredoka, sans-serif; font-size: 20px; font-weight: 600; cursor: pointer; box-shadow: 0 5px 0 #4A2A1A">Pull the ribbon</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ opened }}" hint-placeholder-val="{{ false }}">
+<div class="scroller reveal" style="position: absolute; inset: 0; overflow-y: auto">
+<div style="position: relative; padding: 34px 22px 26px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
+<div style="display: flex; align-items: flex-end; justify-content: center; gap: 6px; width: 100%">
+<svg class="bob" style="--r: -8deg" width="80" height="90" viewBox="0 0 80 90" aria-hidden="true">
+<g stroke="#4A2A1A" stroke-width="2.5" stroke-linejoin="round"><path d="M40 6 L66 44 H54 L72 72 H8 L26 44 H14 Z" fill="#3F8F5F"/><rect x="33" y="72" width="14" height="12" fill="#A8663A"/><path d="M40 0 l3 6 h6 l-5 4 2 6 -6 -4 -6 4 2 -6 -5 -4 h6z" fill="#F2C94C" stroke-width="1.6"/></g>
+<circle cx="28" cy="60" r="3.5" fill="#D23B4A"/><circle cx="54" cy="52" r="3.5" fill="#F2C94C"/>
+<circle cx="34" cy="38" r="2.8" fill="#2A1408"/><circle cx="46" cy="38" r="2.8" fill="#2A1408"/><path d="M36 43 q4 4 8 0" fill="none" stroke="#2A1408" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<svg class="hop" width="130" height="150" viewBox="0 0 140 160" aria-hidden="true">
+<g stroke="#4A2A1A" stroke-width="2.5" stroke-linejoin="round" fill="#C8814A">
+<rect class="wave" x="10" y="66" width="42" height="20" rx="10" transform="rotate(-25 31 76)"/>
+<rect x="88" y="66" width="42" height="20" rx="10" transform="rotate(20 109 76)"/>
+<rect x="40" y="112" width="22" height="42" rx="11" transform="rotate(12 51 133)"/>
+<rect x="78" y="112" width="22" height="42" rx="11" transform="rotate(-12 89 133)"/>
+<rect x="40" y="58" width="60" height="66" rx="26"/>
+<circle cx="70" cy="38" r="28"/>
+</g>
+<g fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"><path d="M14 66 q4 4 0 10 M126 74 q-4 4 0 10 M40 146 q6 3 12 0 M86 146 q6 3 12 0"/></g>
+<circle cx="70" cy="76" r="5" fill="#D23B4A" stroke="#4A2A1A" stroke-width="1.6"/><circle cx="70" cy="94" r="5" fill="#3F8F5F" stroke="#4A2A1A" stroke-width="1.6"/>
+<g class="blink"><circle cx="60" cy="34" r="4" fill="#2A1408"/><circle cx="80" cy="34" r="4" fill="#2A1408"/><circle cx="61.4" cy="32.6" r="1.3" fill="#FFFFFF"/><circle cx="81.4" cy="32.6" r="1.3" fill="#FFFFFF"/></g>
+<ellipse cx="52" cy="44" rx="5" ry="3" fill="#F28B9B"/><ellipse cx="88" cy="44" rx="5" ry="3" fill="#F28B9B"/>
+<path d="M62 46 q8 8 16 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+<path d="M50 20 q20 -14 40 0" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 5"/>
+</svg>
+<svg class="bob" style="--r: 8deg; animation-delay: -1.2s" width="80" height="90" viewBox="0 0 80 90" aria-hidden="true">
+<path d="M28 20 q-4 -8 2 -14 M40 18 q-4 -8 2 -14 M52 20 q-4 -8 2 -14" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+<g stroke="#4A2A1A" stroke-width="2.5" stroke-linejoin="round"><path d="M64 40 q16 0 14 14 q-2 12 -16 10" fill="none"/><path d="M12 28 H66 V70 Q66 84 52 84 H26 Q12 84 12 70 Z" fill="#F7F1E8"/><ellipse cx="39" cy="28" rx="27" ry="6" fill="#8B4A2B"/></g>
+<rect x="12" y="48" width="54" height="10" fill="#D23B4A"/>
+<circle cx="32" cy="66" r="2.8" fill="#2A1408"/><circle cx="46" cy="66" r="2.8" fill="#2A1408"/><path d="M35 72 q4 4 8 0" fill="none" stroke="#2A1408" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="25" cy="72" rx="4" ry="2.4" fill="#F28B9B"/><ellipse cx="53" cy="72" rx="4" ry="2.4" fill="#F28B9B"/>
+</svg>
+</div>
+<p style="margin: 2px 0 0; padding: 6px 14px; background: #FFFFFF; border: 2px solid #4A2A1A; border-radius: 999px; font-size: 14px; font-weight: 600">Ginger, Sprout &amp; Cocoa invite you to a</p>
+<h1 style="margin: 0; font-size: 64px; line-height: 0.88; font-weight: 700; color: #C22F3E; letter-spacing: -0.02em">Holly Jolly<br>Christmas Party!</h1>
+<p style="margin: 0; font-size: 19px; font-weight: 500; line-height: 1.4">Cookies, cocoa, carols and a Secret Santa swap. Cozy sweaters encouraged!</p>
+
+<div style="display: flex; gap: 8px; width: 100%">
+<div style="flex: 1; padding: 12px 6px; background: #3F8F5F; border: 2.5px solid #4A2A1A; border-radius: 18px; color: #FFFFFF; display: flex; flex-direction: column; gap: 0"><p style="margin: 0; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ sleeps }}</p><p style="margin: 0; font-size: 13px; font-weight: 600">sleeps to go</p></div>
+<div style="flex: 1; padding: 12px 6px; background: #C22F3E; border: 2.5px solid #4A2A1A; border-radius: 18px; color: #FFFFFF; display: flex; flex-direction: column; gap: 0"><p style="margin: 0; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ hours }}</p><p style="margin: 0; font-size: 13px; font-weight: 600">hours</p></div>
+<div style="flex: 1; padding: 12px 6px; background: #F2C94C; border: 2.5px solid #4A2A1A; border-radius: 18px; color: #4A2A1A; display: flex; flex-direction: column; gap: 0"><p style="margin: 0; font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums">{{ mins }}</p><p style="margin: 0; font-size: 13px; font-weight: 600">minutes</p></div>
+</div>
+
+<div style="width: 100%; box-sizing: border-box; padding: 18px; background: #FFFFFF; border: 2.5px solid #4A2A1A; border-radius: 24px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 22px; font-weight: 700">{{ dateLabel }}</p>
+<p style="margin: 0; font-size: 16px; font-weight: 500">[Address] · Hosted by [Your Name]</p>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 8px">
+<a href="https://maps.google.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 18px; border: 2.5px solid #4A2A1A; border-radius: 999px; background: #3F8F5F; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: 0 3px 0 #4A2A1A">Find the party</a>
+<button type="button" onClick="{{ toggleCal }}" aria-expanded="{{ calExpanded }}" style="min-height: 44px; display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border: 2.5px solid #4A2A1A; border-radius: 999px; background: #FFFFFF; color: #4A2A1A; font-family: Fredoka, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 3px 0 #4A2A1A">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg>
+Add to calendar</button>
+</div>
+<sc-if value="{{ calOpen }}" hint-placeholder-val="{{ false }}">
+<div class="reveal" style="margin-top: 8px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<a href="{{ cal.google }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border: 2px solid #4A2A1A; border-radius: 14px; background: #FDF6EC; color: #4A2A1A; font-size: 14px; font-weight: 600; text-decoration: none">Google</a>
+<button type="button" onClick="{{ cal.ics }}" style="min-height: 44px; border: 2px solid #4A2A1A; border-radius: 14px; background: #FDF6EC; color: #4A2A1A; font-family: Fredoka, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">Apple</button>
+<a href="{{ cal.outlook }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border: 2px solid #4A2A1A; border-radius: 14px; background: #FDF6EC; color: #4A2A1A; font-size: 14px; font-weight: 600; text-decoration: none">Outlook</a>
+</div>
+</sc-if>
+</div>
+</div>
+
+<div style="margin: 0 16px 34px; padding: 24px 18px; background: #FFFFFF; border: 3px solid #4A2A1A; border-radius: 26px; box-shadow: 0 6px 0 #4A2A1A; display: flex; flex-direction: column; gap: 18px">
+<sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-size: 32px; font-weight: 700; text-align: center">RSVP to Ginger</h2>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="x-name" style="font-size: 15px; font-weight: 600">Your name</label>
+<input id="x-name" type="text" value="{{ name }}" onInput="{{ setName }}" placeholder="First and last name" style="min-height: 46px; box-sizing: border-box; padding: 10px 14px; border: 2.5px solid #4A2A1A; border-radius: 16px; background: #FDF6EC; font-family: Fredoka, sans-serif; font-size: 16px; color: #4A2A1A">
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{ sayYes }}" aria-pressed="{{ yesPressed }}" style="min-height: 46px; padding: 10px; border: 2.5px solid #4A2A1A; border-radius: 999px; background: {{ yesBg }}; color: {{ yesFg }}; font-family: Fredoka, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer">Yay, I’m in!</button>
+<button type="button" onClick="{{ sayNo }}" aria-pressed="{{ noPressed }}" style="min-height: 46px; padding: 10px; border: 2.5px solid #4A2A1A; border-radius: 999px; background: {{ noBg }}; color: {{ noFg }}; font-family: Fredoka, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer">Can’t this time</button>
+</div>
+<sc-if value="{{ yes }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 16px; background: #FDF6EC; border: 2px dashed #4A2A1A; border-radius: 18px">
+<p style="margin: 0; font-size: 18px; font-weight: 700">Secret Santa swap</p>
+<p style="margin: -8px 0 0; font-size: 15px; line-height: 1.4">Bring a wrapped gift around [$ amount] and go home with a surprise.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{ santaIn }}" aria-pressed="{{ santaInPressed }}" style="min-height: 44px; padding: 8px; border: 2px solid #4A2A1A; border-radius: 14px; background: {{ santaInBg }}; color: {{ santaInFg }}; font-family: Fredoka, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">Count me in</button>
+<button type="button" onClick="{{ santaOut }}" aria-pressed="{{ santaOutPressed }}" style="min-height: 44px; padding: 8px; border: 2px solid #4A2A1A; border-radius: 14px; background: {{ santaOutBg }}; color: {{ santaOutFg }}; font-family: Fredoka, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">I’ll just watch</button>
+</div>
+<sc-if value="{{ santaYes }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="x-wish" style="font-size: 14px; font-weight: 600">A hint for your Santa (optional)</label>
+<input id="x-wish" type="text" value="{{ wish }}" onInput="{{ setWish }}" placeholder="e.g. cozy socks, a good book" style="min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 2px solid #4A2A1A; border-radius: 14px; background: #FFFFFF; font-family: Fredoka, sans-serif; font-size: 16px; color: #4A2A1A">
+</div>
+</sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; font-size: 16px; font-weight: 600; color: #B02A3A">{{ error }}</p>
+</sc-if>
+<button type="button" onClick="{{ submit }}" style="min-height: 52px; padding: 12px; border: 3px solid #4A2A1A; border-radius: 999px; background: #C22F3E; color: #FFFFFF; font-family: Fredoka, sans-serif; font-size: 19px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 0 #4A2A1A">Send to the North Pole</button>
+</div>
+</sc-if>
+<sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<h2 style="margin: 0; font-size: 38px; font-weight: 700; line-height: 1; color: #C22F3E">{{ thanksTitle }}</h2>
+<p style="margin: 0; font-size: 17px; font-weight: 500; line-height: 1.45">{{ thanksText }}</p>
+<sc-if value="{{ yesDone }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 8px; width: 100%; margin-top: 4px">
+<p style="margin: 0; font-size: 15px; font-weight: 600">Save the date:</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<a href="{{ cal.google }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border: 2px solid #4A2A1A; border-radius: 14px; background: #3F8F5F; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none">Google</a>
+<button type="button" onClick="{{ cal.ics }}" style="min-height: 44px; border: 2px solid #4A2A1A; border-radius: 14px; background: #3F8F5F; color: #FFFFFF; font-family: Fredoka, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer">Apple</button>
+<a href="{{ cal.outlook }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border: 2px solid #4A2A1A; border-radius: 14px; background: #3F8F5F; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none">Outlook</a>
+</div>
+</div>
+</sc-if>
+<button type="button" onClick="{{ edit }}" style="min-height: 44px; padding: 10px 20px; border: 2.5px solid #4A2A1A; border-radius: 999px; background: transparent; color: #4A2A1A; font-family: Fredoka, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">Change my answer</button>
+</div>
+</sc-if>
+</div>
+<p style="margin: 0 0 36px; text-align: center; font-size: 22px; font-weight: 600">Merry everything!</p>
+<p style="margin: 0 0 40px; text-align: center; font-size: 14px; font-weight: 600; color: #4A2A1A">Made with <a href="https://peekaboopost.com" target="_blank" rel="noopener" style="color: #4A2A1A; text-decoration: underline">Peekaboo Post</a> · Make your own invite</p>
+</div>
+</sc-if>
+</div>
+</template>
+<script type="application/json" id="card-props">{"accent":{"editor":"color","default":"#FCE4E6","options":["#FCE4E6","#DDEFE3","#E3ECF7"]},"eventDate":{"editor":"text","default":"2026-12-19T17:00"},"$preview":{"width":390,"height":844}}</script>
+<script type="text/x-card" id="card-logic">
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { phase: 'closed', name: '', attending: null, santa: null, wish: '', submitted: false, error: '' };
+}
+componentDidMount() { this.timer = setInterval(() => this.forceUpdate(), 30000); }
+componentWillUnmount() { clearInterval(this.timer); clearTimeout(this.openTimer); }
+calendar(title, details, fallback) {
+const pad = (n) => String(n).padStart(2, '0');
+const start = new Date(this.props.eventDate ?? fallback);
+if (isNaN(start.getTime())) return { google: '#', outlook: '#', ics: () => {} };
+const end = new Date(start.getTime() + 3 * 3600000);
+const stamp = (d) => '' + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + 'T' + pad(d.getHours()) + pad(d.getMinutes()) + '00';
+const iso = (d) => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':00';
+const where = '[Address]';
+const e = encodeURIComponent;
+return {
+google: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + e(title) + '&dates=' + stamp(start) + '/' + stamp(end) + '&details=' + e(details) + '&location=' + e(where),
+outlook: 'https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=' + e(title) + '&startdt=' + e(iso(start)) + '&enddt=' + e(iso(end)) + '&body=' + e(details) + '&location=' + e(where),
+ics: () => {
+const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Digital Invitations//EN', 'BEGIN:VEVENT', 'UID:' + stamp(start) + '-' + Math.random().toString(36).slice(2) + '@invite', 'DTSTAMP:' + now, 'DTSTART:' + stamp(start), 'DTEND:' + stamp(end), 'SUMMARY:' + title, 'DESCRIPTION:' + details, 'LOCATION:' + where, 'END:VEVENT', 'END:VCALENDAR'];
+try {
+const url = URL.createObjectURL(new Blob([lines.join('\r\n')], { type: 'text/calendar' }));
+const a = document.createElement('a'); a.href = url; a.download = 'invitation.ics'; a.click();
+setTimeout(() => URL.revokeObjectURL(url), 3000);
+} catch (err) {}
+}
+};
+}
+renderVals() {
+const s = this.state;
+const accent = this.props.accent ?? '#FCE4E6';
+const when = new Date(this.props.eventDate ?? '2026-12-19T17:00');
+const valid = !isNaN(when.getTime());
+let diff = valid ? Math.max(0, when.getTime() - Date.now()) : 0;
+const dd = Math.floor(diff / 86400000); diff -= dd * 86400000;
+const hh = Math.floor(diff / 3600000); diff -= hh * 3600000;
+const mm = Math.floor(diff / 60000);
+const yes = s.attending === 'yes', no = s.attending === 'no';
+const sIn = s.santa === 'in', sOut = s.santa === 'out';
+const first = (s.name || '').trim().split(' ')[0];
+return {
+accent,
+cal: this.calendar('Christmas Party', 'Holly jolly Christmas party hosted by [Your Name]. Secret Santa swap!', '2026-12-19T17:00'),
+calOpen: !!s.calOpen, calExpanded: s.calOpen ? 'true' : 'false',
+toggleCal: () => this.setState({ calOpen: !s.calOpen }),
+closed: s.phase !== 'open', opened: s.phase === 'open',
+openClass: s.phase === 'closed' ? '' : 'is-open',
+open: () => { if (s.phase !== 'closed') return; this.setState({ phase: 'opening' }); this.openTimer = setTimeout(() => this.setState({ phase: 'open' }), 2800); },
+sleeps: String(dd), hours: String(hh), mins: String(mm),
+dateLabel: valid ? when.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }) + ' · ' + when.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : '[Date] · [Time]',
+name: s.name, wish: s.wish, yes,
+setName: (e) => this.setState({ name: e.target.value, error: '' }),
+setWish: (e) => this.setState({ wish: e.target.value }),
+sayYes: () => this.setState({ attending: 'yes', error: '' }),
+sayNo: () => this.setState({ attending: 'no', error: '' }),
+yesPressed: yes ? 'true' : 'false', noPressed: no ? 'true' : 'false',
+yesBg: yes ? '#C22F3E' : '#FFFFFF', yesFg: yes ? '#FFFFFF' : '#4A2A1A',
+noBg: no ? '#4A2A1A' : '#FFFFFF', noFg: no ? '#FFFFFF' : '#4A2A1A',
+santaIn: () => this.setState({ santa: 'in' }), santaOut: () => this.setState({ santa: 'out' }),
+santaYes: sIn,
+santaInPressed: sIn ? 'true' : 'false', santaOutPressed: sOut ? 'true' : 'false',
+santaInBg: sIn ? '#3F8F5F' : '#FFFFFF', santaInFg: sIn ? '#FFFFFF' : '#4A2A1A',
+santaOutBg: sOut ? '#4A2A1A' : '#FFFFFF', santaOutFg: sOut ? '#FFFFFF' : '#4A2A1A',
+error: s.error,
+submit: () => {
+if (!s.name.trim()) return this.setState({ error: 'Ginger needs your name first!' });
+if (!s.attending) return this.setState({ error: 'Are you coming? Tap one.' });
+this.setState({ submitted: true, error: '' });
+},
+edit: () => this.setState({ submitted: false }),
+submitted: s.submitted, notSubmitted: !s.submitted, yesDone: s.submitted && yes,
+thanksTitle: yes ? 'Yay, ' + (first || 'friend') + '!' : 'We’ll miss you!',
+thanksText: yes ? (sIn ? 'You’re in the Secret Santa swap' + (s.wish.trim() ? ' — your Santa will get the hint: “' + s.wish.trim() + '”.' : '.') : 'Your spot is saved. Ginger is already baking.') : 'Thanks for letting us know' + (first ? ', ' + first : '') + '. Merry Christmas from the whole crew!'
+};
+}
+}
+</script>
+<script src="/invites/invite.js"></script>
+</body>
+</html>

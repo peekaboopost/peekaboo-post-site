@@ -127,18 +127,18 @@ h2 { font-size: clamp(36px, 5vw, 52px); font-weight: 700; letter-spacing: -0.01e
   list-style: none; padding: 0; margin: 36px 0 0;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;
 }
-.crew-list li {
-  display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 24px 12px 20px;
+.crew-list li a {
+  display: flex; height: 100%; box-sizing: border-box; text-decoration: none; color: var(--navy); flex-direction: column; align-items: center; gap: 4px; padding: 24px 12px 20px;
   background: #FFFFFF; border: 3px solid var(--navy); border-radius: var(--radius); box-shadow: var(--shadow);
 }
-.crew-list li:nth-child(1) { background: #FFE0BD; }
-.crew-list li:nth-child(2) { background: #E6EEFA; }
-.crew-list li:nth-child(3) { background: #FCE4E6; }
-.crew-list li:nth-child(4) { background: #DCE3F5; }
+.crew-list li:nth-child(1) a { background: #FFE0BD; }
+.crew-list li:nth-child(2) a { background: #E6EEFA; }
+.crew-list li:nth-child(3) a { background: #FCE4E6; }
+.crew-list li:nth-child(4) a { background: #DCE3F5; }
 .crew-list .mascot { height: 140px; width: auto; margin-bottom: 8px; }
 .crew-list span { font-size: 24px; font-weight: 700; }
 .crew-list small { font-size: 15px; color: var(--ink-soft); }
-.crew-list li:hover .mascot { animation: wiggle .6s ease-in-out; }
+.crew-list li a:hover .mascot { animation: wiggle .6s ease-in-out; }
 @keyframes wiggle { 0%, 100% { transform: rotate(0); } 33% { transform: rotate(-6deg); } 66% { transform: rotate(6deg); } }
 
 .feature-list {
@@ -171,3 +171,10 @@ h2 { font-size: clamp(36px, 5vw, 52px); font-weight: 700; letter-spacing: -0.01e
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+.crew-list li { padding: 0; }
+.crew-list li a:focus-visible { outline: 3px solid var(--butter); outline-offset: 4px; border-radius: var(--radius); }
+.crew-more { margin: 32px 0 0; }
+.topbar-nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.topbar-link { font-weight: 600; color: var(--navy); text-decoration: none; padding: 10px 12px; min-height: 44px; display: inline-flex; align-items: center; }
+.topbar-link:hover { color: var(--coral-dark); }

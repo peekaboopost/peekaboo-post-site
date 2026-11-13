@@ -21,7 +21,7 @@
 <body>
 <header class="topbar">
   <a class="logo" href="/" aria-label="Peekaboo Post home"><img class="logo-icon" src="/brand/peekaboo-post-icon.svg" alt="" width="48" height="48"><span class="logo-text"><span class="logo-peekaboo">PEEKABOO</span><span class="logo-post">post</span></span></a>
-  <a class="topbar-cta" href="#signup">Get early access</a>
+  <nav class="topbar-nav" aria-label="Main"><a class="topbar-link" href="/invites/">Browse invites</a><a class="topbar-cta" href="#signup">Get early access</a></nav>
 </header>
 
 <main>
@@ -52,9 +52,9 @@
 
   <section class="crew" aria-labelledby="crew-title">
     <h2 id="crew-title">Meet the crew</h2>
-    <p class="section-lede">Every season gets its own cast of characters, ready to pop out of your invite.</p>
+    <p class="section-lede">Every season gets its own cast of characters, ready to pop out of your invite. Tap one to open their invitation.</p>
     <ul class="crew-list">
-      <li><svg class="mascot" width="120" height="140" viewBox="0 0 160 170" aria-hidden="true">
+      <li><a href="/invites/friendsgiving-cute-crew"><svg class="mascot" width="120" height="140" viewBox="0 0 160 170" aria-hidden="true">
 <g stroke="#4A2A1A" stroke-width="2.5">
 <ellipse cx="80" cy="96" rx="16" ry="48" fill="#E8875B" transform="rotate(-60 80 110)"/>
 <ellipse cx="80" cy="96" rx="16" ry="48" fill="#F2B544" transform="rotate(-30 80 110)"/>
@@ -72,14 +72,14 @@
 <path d="M75 75 L85 75 L80 83 Z" fill="#F2B544" stroke="#4A2A1A" stroke-width="2" stroke-linejoin="round"/>
 <path d="M82 81 q6 6 2 14 q-6 -4 -2 -14z" fill="#C2374F" stroke="#4A2A1A" stroke-width="1.6"/>
 <path d="M68 150 v12 m-6 0 h12 M92 150 v12 m-6 0 h12" stroke="#E8875B" stroke-width="4" stroke-linecap="round"/>
-</svg><span>Gobble</span><small>Thanksgiving</small></li>
-      <li><svg class="mascot" width="120" height="140" viewBox="0 0 80 100" aria-hidden="true">
+</svg><span>Gobble</span><small>Thanksgiving · Open the invite</small></a></li>
+      <li><a href="/invites/hanukkah-latkes-and-lights"><svg class="mascot" width="120" height="140" viewBox="0 0 80 100" aria-hidden="true">
 <g stroke="#1F2A44" stroke-width="2.5" stroke-linejoin="round"><rect x="34" y="4" width="12" height="20" rx="4" fill="#E8B84A"/><path d="M12 24 H68 V60 L40 94 L12 60 Z" fill="#2F5DA8"/><path d="M12 24 H40 V94 L12 60 Z" fill="#3F72C4"/></g>
 <g><circle cx="31" cy="44" r="5" fill="#FFFFFF" stroke="#1F2A44" stroke-width="1.6"/><circle cx="49" cy="44" r="5" fill="#FFFFFF" stroke="#1F2A44" stroke-width="1.6"/><circle cx="31.5" cy="45" r="2.6" fill="#1F2A44"/><circle cx="49.5" cy="45" r="2.6" fill="#1F2A44"/></g>
 <ellipse cx="24" cy="54" rx="4" ry="2.4" fill="#F28B9B"/><ellipse cx="56" cy="54" rx="4" ry="2.4" fill="#F28B9B"/>
 <path d="M34 54 q6 6 12 0" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
-</svg><span>Dreidel</span><small>Hanukkah</small></li>
-      <li><svg class="mascot" width="120" height="140" viewBox="0 0 140 160" aria-hidden="true">
+</svg><span>Dreidel</span><small>Hanukkah · Open the invite</small></a></li>
+      <li><a href="/invites/christmas-cute-crew"><svg class="mascot" width="120" height="140" viewBox="0 0 140 160" aria-hidden="true">
 <g stroke="#4A2A1A" stroke-width="2.5" stroke-linejoin="round" fill="#C8814A">
 <rect x="10" y="66" width="42" height="20" rx="10" transform="rotate(-25 31 76)"/>
 <rect x="88" y="66" width="42" height="20" rx="10" transform="rotate(20 109 76)"/>
@@ -94,8 +94,8 @@
 <ellipse cx="52" cy="44" rx="5" ry="3" fill="#F28B9B"/><ellipse cx="88" cy="44" rx="5" ry="3" fill="#F28B9B"/>
 <path d="M62 46 q8 8 16 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
 <path d="M50 20 q20 -14 40 0" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 5"/>
-</svg><span>Ginger</span><small>Christmas</small></li>
-      <li><svg class="mascot" width="120" height="140" viewBox="0 0 120 150" aria-hidden="true">
+</svg><span>Ginger</span><small>Christmas · Open the invite</small></a></li>
+      <li><a href="/invites/new-years-cute-crew"><svg class="mascot" width="120" height="140" viewBox="0 0 120 150" aria-hidden="true">
 <g stroke="#0E1530" stroke-width="2.5" stroke-linejoin="round">
 <ellipse cx="60" cy="92" rx="42" ry="50" fill="#2B3B66"/>
 <ellipse cx="60" cy="100" rx="28" ry="38" fill="#FFFFFF"/>
@@ -109,8 +109,9 @@
 <g><circle cx="48" cy="72" r="5" fill="#0E1530"/><circle cx="72" cy="72" r="5" fill="#0E1530"/><circle cx="49.6" cy="70.4" r="1.6" fill="#FFFFFF"/><circle cx="73.6" cy="70.4" r="1.6" fill="#FFFFFF"/></g>
 <ellipse cx="40" cy="84" rx="6" ry="3.5" fill="#FF8FB1"/><ellipse cx="80" cy="84" rx="6" ry="3.5" fill="#FF8FB1"/>
 <path d="M53 80 L67 80 L60 90 Z" fill="#F2A33A" stroke="#0E1530" stroke-width="2" stroke-linejoin="round"/>
-</svg><span>Pip</span><small>New Year’s</small></li>
+</svg><span>Pip</span><small>New Year’s · Open the invite</small></a></li>
     </ul>
+    <p class="crew-more"><a class="button button-ghost" href="/invites/">Browse all 8 invites</a></p>
   </section>
 
   <section class="features" aria-labelledby="features-title">

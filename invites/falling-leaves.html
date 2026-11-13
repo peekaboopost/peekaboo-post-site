@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/invites/invites.css">
+<title>Falling Leaves · Thanksgiving invitation · Peekaboo Post</title>
+<meta name="description" content="Modern and calm, with a gratitude wall your guests fill in. A tap-to-open digital invitation from Peekaboo Post.">
+<meta property="og:title" content="Falling Leaves — a Peekaboo Post invitation">
+<meta property="og:description" content="Modern and calm, with a gratitude wall your guests fill in.">
+<meta property="og:image" content="https://peekaboopost.com/brand/peekaboo-post-profile-1080.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#A9472A}a:hover{color:#2B2420}
+@keyframes drift{0%{transform:translate(0,-40px) rotate(0)}25%{transform:translate(18px,80px) rotate(80deg)}50%{transform:translate(-12px,200px) rotate(170deg)}75%{transform:translate(14px,320px) rotate(260deg)}100%{transform:translate(0,440px) rotate(360deg)}}
+.drift{position:absolute;top:0;pointer-events:none;animation-name:drift;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+@keyframes reveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.reveal{animation:reveal 1s ease-out both}
+@keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-origin:50% 90%}
+.bigleaf{transition:transform 1s cubic-bezier(.5,-.3,.6,1),opacity 1s ease}
+.bigleaf.is-open{transform:translate(160px,-520px) rotate(220deg) scale(.4);opacity:0}
+.fadeout{transition:opacity .6s ease .3s}
+.fadeout.is-open{opacity:0}
+.scroller{scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body class="pp-page invite-page">
+<header class="pp-bar"><a class="pp-logo" href="/" aria-label="Peekaboo Post home"><img src="/brand/peekaboo-post-icon.svg" alt="" width="40" height="40"><span class="pp-logo-text"><span class="pp-logo-peekaboo">PEEKABOO</span><span class="pp-logo-post">post</span></span></a><nav class="pp-nav" aria-label="Main"><a class="pp-link" href="/invites/">Browse invites</a><a class="pp-button" href="/#signup">Get early access</a></nav></header>
+<main class="stage">
+<div class="frame"><div id="card"></div></div>
+<section class="invite-info" aria-labelledby="invite-title">
+<p class="tag">Thanksgiving</p>
+<h1 id="invite-title">Falling Leaves</h1>
+<p>Modern and calm, with a gratitude wall your guests fill in.</p>
+<ul><li>Tap-the-leaf reveal</li><li>Schedule for the day</li><li>Gratitude wall + dietary notes</li></ul>
+<p class="hint">Try it — tap to open the invite and RSVP. This is a demo, so nothing you enter is saved.</p>
+<a class="pp-button" href="/#signup" style="align-self: flex-start">Get early access</a>
+</section>
+</main>
+<template id="card-template">
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F5EEE3; font-family: 'DM Sans', sans-serif; color: #2B2420">
+
+<sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; text-align: center; padding: 32px; box-sizing: border-box">
+<p class="fadeout {{ openClass }}" style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: {{ accent }}">Thanksgiving · 2026</p>
+<div class="bigleaf {{ openClass }}">
+<button type="button" onClick="{{ open }}" aria-label="Open the invitation" style="width: 220px; height: 220px; border-radius: 50%; border: 1.5px solid {{ accent }}; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0">
+<svg class="sway" width="130" height="150" viewBox="0 0 24 26" aria-hidden="true"><path d="M12 2l1.6 4.2 3-1.6-.9 4.1 3.8-.6-2.3 3.2 3.3 1.5-3.8 1.6.8 2.4-4-.9L13 20h-2l-.5-4.5-4 .9.8-2.4-3.8-1.6 3.3-1.5-2.3-3.2 3.8.6-.9-4.1 3 1.6z" fill="{{ accent }}"/><path d="M12 8v17" stroke="#7A2F18" stroke-width=".7" stroke-linecap="round"/><path d="M12 12l-3-2.4M12 12l3-2.4M12 15.5l-4-1.6M12 15.5l4-1.6" stroke="#7A2F18" stroke-width=".5" stroke-linecap="round"/></svg>
+</button>
+</div>
+<div class="fadeout {{ openClass }}" style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 40px; line-height: 1.05">Something’s<br><span style="font-style: italic; color: {{ accent }}">falling</span> your way</p>
+<p style="margin: 0; font-size: 15px; font-weight: 500; color: #5C4F45">Tap the leaf to open</p>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ opened }}" hint-placeholder-val="{{ false }}">
+<div class="scroller reveal" style="position: absolute; inset: 0; overflow-y: auto">
+
+<div style="position: relative; overflow: hidden; padding: 72px 28px 36px; display: flex; flex-direction: column; gap: 22px">
+<svg class="drift" style="left: 40px; animation-duration: 9s; animation-delay: -1s" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.6 4.2 3-1.6-.9 4.1 3.8-.6-2.3 3.2 3.3 1.5-3.8 1.6.8 2.4-4-.9L13 20h-2l-.5-4.5-4 .9.8-2.4-3.8-1.6 3.3-1.5-2.3-3.2 3.8.6-.9-4.1 3 1.6z" fill="#C98A2B" opacity=".55"/></svg>
+<svg class="drift" style="left: 170px; animation-duration: 12s; animation-delay: -5s" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.6 4.2 3-1.6-.9 4.1 3.8-.6-2.3 3.2 3.3 1.5-3.8 1.6.8 2.4-4-.9L13 20h-2l-.5-4.5-4 .9.8-2.4-3.8-1.6 3.3-1.5-2.3-3.2 3.8.6-.9-4.1 3 1.6z" fill="#A9472A" opacity=".5"/></svg>
+<svg class="drift" style="left: 290px; animation-duration: 10s; animation-delay: -3s" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.6 4.2 3-1.6-.9 4.1 3.8-.6-2.3 3.2 3.3 1.5-3.8 1.6.8 2.4-4-.9L13 20h-2l-.5-4.5-4 .9.8-2.4-3.8-1.6 3.3-1.5-2.3-3.2 3.8.6-.9-4.1 3 1.6z" fill="#5E6B34" opacity=".45"/></svg>
+<svg class="drift" style="left: 340px; animation-duration: 14s; animation-delay: -8s" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.6 4.2 3-1.6-.9 4.1 3.8-.6-2.3 3.2 3.3 1.5-3.8 1.6.8 2.4-4-.9L13 20h-2l-.5-4.5-4 .9.8-2.4-3.8-1.6 3.3-1.5-2.3-3.2 3.8.6-.9-4.1 3 1.6z" fill="#C98A2B" opacity=".55"/></svg>
+<p style="margin: 0; position: relative; font-size: 13px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: {{ accent }}">You’re invited</p>
+<h1 style="margin: 0; position: relative; font-family: 'DM Serif Display', serif; font-size: 66px; line-height: 0.95; font-weight: 400">Gather &amp;<br><span style="font-style: italic; color: {{ accent }}">give thanks.</span></h1>
+<p style="margin: 0; position: relative; font-size: 17px; line-height: 1.6; color: #4A3F37">A slow afternoon of good food, long conversations and a little football.</p>
+<div style="position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; border-top: 1.5px solid #2B2420; padding-top: 18px">
+<div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6B5D52">When</p><p style="margin: 0; font-size: 16px; font-weight: 500; line-height: 1.4">{{ dayLabel }}<br>{{ timeLabel }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6B5D52">Where</p><p style="margin: 0; font-size: 16px; font-weight: 500; line-height: 1.4">[Address]<br><a href="https://maps.google.com" target="_blank" rel="noopener" style="color: {{ accent }}; font-weight: 700">Open in maps</a></p></div>
+</div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px">
+<button type="button" onClick="{{ toggleCal }}" aria-expanded="{{ calExpanded }}" style="align-self: flex-start; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border: 1.5px solid #2B2420; border-radius: 999px; background: transparent; color: #2B2420; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg>
+Add to calendar</button>
+<sc-if value="{{ calOpen }}" hint-placeholder-val="{{ false }}">
+<div class="reveal" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<a href="{{ cal.google }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: #FFFFFF; color: #2B2420; font-size: 14px; font-weight: 700; text-decoration: none">Google</a>
+<button type="button" onClick="{{ cal.ics }}" style="min-height: 44px; border: none; border-radius: 12px; background: #FFFFFF; color: #2B2420; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">Apple</button>
+<a href="{{ cal.outlook }}" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: #FFFFFF; color: #2B2420; font-size: 14px; font-weight: 700; text-decoration: none">Outlook</a>
+</div>
+</sc-if>
+</div>
+</div>
+
+<div style="margin: 0 28px 36px; display: flex; flex-direction: column; gap: 0">
+<p style="margin: 0 0 14px; font-family: 'DM Serif Display', serif; font-size: 30px">The day</p>
+<sc-for list="{{ schedule }}" as="row" hint-placeholder-count="4">
+<div style="display: flex; gap: 16px">
+<div style="display: flex; flex-direction: column; align-items: center; width: 14px">
+<div style="width: 12px; height: 12px; border-radius: 50%; background: {{ accent }}; margin-top: 6px; flex-shrink: 0"></div>
+<div style="flex: 1; width: 1.5px; background: #CDBFAE"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; padding-bottom: 18px">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: {{ accent }}">{{ row.time }}</p>
+<p style="margin: 0; font-size: 17px; font-weight: 500">{{ row.what }}</p>
+</div>
+</div>
+</sc-for>
+</div>
+
+<div style="margin: 0 20px 28px; padding: 26px 20px; background: #FFFFFF; border-radius: 22px; display: flex; flex-direction: column; gap: 16px">
+<sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h2 style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 34px; font-weight: 400">Save your seat</h2>
+<p style="margin: 0; font-size: 14px; color: #5C4F45">Please reply by [RSVP date].</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-name" style="font-size: 13px; font-weight: 700">Your name</label>
+<input id="f-name" type="text" value="{{ name }}" onInput="{{ setName }}" placeholder="First and last name" style="min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #CDBFAE; border-radius: 12px; background: #FBF8F3; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2B2420">
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{ sayYes }}" aria-pressed="{{ yesPressed }}" style="min-height: 44px; padding: 10px; border: 1.5px solid #2B2420; border-radius: 999px; background: {{ yesBg }}; color: {{ yesFg }}; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">I’ll be there</button>
+<button type="button" onClick="{{ sayNo }}" aria-pressed="{{ noPressed }}" style="min-height: 44px; padding: 10px; border: 1.5px solid #2B2420; border-radius: 999px; background: {{ noBg }}; color: {{ noFg }}; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">Can’t make it</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-diet" style="font-size: 13px; font-weight: 700">Allergies or dietary needs</label>
+<input id="f-diet" type="text" value="{{ diet }}" onInput="{{ setDiet }}" placeholder="e.g. vegetarian, nut allergy" style="min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #CDBFAE; border-radius: 12px; background: #FBF8F3; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2B2420">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-thanks" style="font-size: 13px; font-weight: 700">One thing you’re thankful for (optional)</label>
+<input id="f-thanks" type="text" value="{{ thanks }}" onInput="{{ setThanks }}" placeholder="It goes on the gratitude wall" style="min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid #CDBFAE; border-radius: 12px; background: #FBF8F3; font-family: 'DM Sans', sans-serif; font-size: 16px; color: #2B2420">
+</div>
+<sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; font-size: 14px; color: #9E2A12">{{ error }}</p>
+</sc-if>
+<button type="button" onClick="{{ submit }}" style="min-height: 48px; padding: 12px; border: none; border-radius: 999px; background: {{ accent }}; color: #FFFFFF; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer">Send RSVP</button>
+</div>
+</sc-if>
+<sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 10px; padding: 8px 0">
+<h2 style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 34px; font-weight: 400; color: {{ accent }}">{{ thanksTitle }}</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A3F37">{{ thanksText }}</p>
+<button type="button" onClick="{{ edit }}" style="align-self: flex-start; min-height: 44px; padding: 10px 20px; border: 1.5px solid #2B2420; border-radius: 999px; background: transparent; color: #2B2420; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; cursor: pointer">Change my answer</button>
+</div>
+</sc-if>
+</div>
+
+<div style="margin: 0 20px 40px; padding: 26px 20px; background: #2B2420; border-radius: 22px; color: #F5EEE3; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 30px; font-weight: 400">Gratitude wall</h2>
+<sc-if value="{{ wallEmpty }}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #D8CCBE">Guests’ notes appear here when they RSVP. Be the first to share yours.</p>
+</sc-if>
+<sc-for list="{{ wall }}" as="note" hint-placeholder-count="0">
+<div style="padding: 14px 16px; background: #3B322C; border-radius: 14px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 19px; font-style: italic; line-height: 1.35">“{{ note.text }}”</p>
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #E3A27E">— {{ note.who }}</p>
+</div>
+</sc-for>
+</div>
+<p style="margin: 0 0 40px; text-align: center; font-size: 14px; font-weight: 600; color: #2B2420">Made with <a href="https://peekaboopost.com" target="_blank" rel="noopener" style="color: #2B2420; text-decoration: underline">Peekaboo Post</a> · Make your own invite</p>
+</div>
+</sc-if>
+</div>
+</template>
+<script type="application/json" id="card-props">{"accent":{"editor":"color","default":"#A9472A","options":["#A9472A","#5E6B34","#8A5A2B"]},"eventDate":{"editor":"text","default":"2026-11-26T14:00"},"$preview":{"width":390,"height":844}}</script>
+<script type="text/x-card" id="card-logic">
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { phase: 'closed', name: '', attending: null, diet: '', thanks: '', submitted: false, error: '', wall: [] };
+}
+componentWillUnmount() { clearTimeout(this.openTimer); }
+calendar(title, details, fallback) {
+const pad = (n) => String(n).padStart(2, '0');
+const start = new Date(this.props.eventDate ?? fallback);
+if (isNaN(start.getTime())) return { google: '#', outlook: '#', ics: () => {} };
+const end = new Date(start.getTime() + 3 * 3600000);
+const stamp = (d) => '' + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + 'T' + pad(d.getHours()) + pad(d.getMinutes()) + '00';
+const iso = (d) => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':00';
+const where = '[Address]';
+const e = encodeURIComponent;
+return {
+google: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + e(title) + '&dates=' + stamp(start) + '/' + stamp(end) + '&details=' + e(details) + '&location=' + e(where),
+outlook: 'https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=' + e(title) + '&startdt=' + e(iso(start)) + '&enddt=' + e(iso(end)) + '&body=' + e(details) + '&location=' + e(where),
+ics: () => {
+const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Digital Invitations//EN', 'BEGIN:VEVENT', 'UID:' + stamp(start) + '-' + Math.random().toString(36).slice(2) + '@invite', 'DTSTAMP:' + now, 'DTSTART:' + stamp(start), 'DTEND:' + stamp(end), 'SUMMARY:' + title, 'DESCRIPTION:' + details, 'LOCATION:' + where, 'END:VEVENT', 'END:VCALENDAR'];
+try {
+const url = URL.createObjectURL(new Blob([lines.join('\r\n')], { type: 'text/calendar' }));
+const a = document.createElement('a'); a.href = url; a.download = 'invitation.ics'; a.click();
+setTimeout(() => URL.revokeObjectURL(url), 3000);
+} catch (err) {}
+}
+};
+}
+renderVals() {
+const s = this.state;
+const accent = this.props.accent ?? '#A9472A';
+const when = new Date(this.props.eventDate ?? '2026-11-26T14:00');
+const valid = !isNaN(when.getTime());
+const yes = s.attending === 'yes', no = s.attending === 'no';
+const first = (s.name || '').trim().split(' ')[0];
+return {
+accent,
+cal: this.calendar('Thanksgiving', 'Thanksgiving gathering hosted by [Your Name].', '2026-11-26T14:00'),
+calOpen: !!s.calOpen, calExpanded: s.calOpen ? 'true' : 'false',
+toggleCal: () => this.setState({ calOpen: !s.calOpen }),
+closed: s.phase !== 'open', opened: s.phase === 'open',
+openClass: s.phase === 'closed' ? '' : 'is-open',
+open: () => { if (s.phase !== 'closed') return; this.setState({ phase: 'opening' }); this.openTimer = setTimeout(() => this.setState({ phase: 'open' }), 1100); },
+dayLabel: valid ? when.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }) : '[Date]',
+timeLabel: valid ? 'from ' + when.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : '[Time]',
+schedule: [
+{ time: '2:00 PM', what: 'Arrive — warm cider and snacks' },
+{ time: '3:30 PM', what: 'Dinner is served' },
+{ time: '5:00 PM', what: 'Pie, coffee and football' },
+{ time: '7:00 PM', what: 'Leftovers boxed up to go' }
+],
+name: s.name, diet: s.diet, thanks: s.thanks,
+setName: (e) => this.setState({ name: e.target.value, error: '' }),
+setDiet: (e) => this.setState({ diet: e.target.value }),
+setThanks: (e) => this.setState({ thanks: e.target.value }),
+sayYes: () => this.setState({ attending: 'yes', error: '' }),
+sayNo: () => this.setState({ attending: 'no', error: '' }),
+yesPressed: yes ? 'true' : 'false', noPressed: no ? 'true' : 'false',
+yesBg: yes ? '#2B2420' : '#FFFFFF', yesFg: yes ? '#FFFFFF' : '#2B2420',
+noBg: no ? '#2B2420' : '#FFFFFF', noFg: no ? '#FFFFFF' : '#2B2420',
+error: s.error,
+submit: () => {
+if (!s.name.trim()) return this.setState({ error: 'Please add your name.' });
+if (!s.attending) return this.setState({ error: 'Let us know if you can make it.' });
+const t = s.thanks.trim();
+const wall = t ? [{ text: t, who: first || 'A guest' }].concat(s.wall) : s.wall;
+this.setState({ submitted: true, error: '', wall, thanks: '' });
+},
+edit: () => this.setState({ submitted: false }),
+submitted: s.submitted, notSubmitted: !s.submitted,
+thanksTitle: yes ? 'Your seat is saved.' : 'Thanks for letting us know.',
+thanksText: yes
+? 'See you soon' + (first ? ', ' + first : '') + '.' + (s.diet.trim() ? ' We’ve noted: ' + s.diet.trim() + '.' : '')
+: 'We’ll miss you' + (first ? ', ' + first : '') + ' — happy Thanksgiving.',
+wall: s.wall, wallEmpty: s.wall.length === 0
+};
+}
+}
+</script>
+<script src="/invites/invite.js"></script>
+</body>
+</html>
