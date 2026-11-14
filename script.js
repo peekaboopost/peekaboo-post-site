@@ -44,7 +44,7 @@ if (form) {
       });
       const data = await response.json().catch(() => ({}));
       if (response.ok) {
-        showMessage('You’re on the list! We’ll let you peek first. 🎉', 'success');
+        showMessage('You’re signed up! Watch your inbox for party ideas &amp; deals. 🎉', 'success');
         form.reset();
       } else {
         showMessage(data.error || 'Something went wrong. Please try again.', 'error');

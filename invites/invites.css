@@ -81,3 +81,8 @@
 @media (prefers-reduced-motion: reduce) {
   .gallery-card a, .pp-button { transition: none; }
 }
+
+/* Phone header: keep logo + Order now on one row */
+@media (max-width: 560px) {
+  .pp-link { display: none; }
+}
