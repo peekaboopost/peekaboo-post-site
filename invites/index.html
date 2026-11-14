@@ -88,6 +88,9 @@
 <a class="pp-button" href="/pricing">See pricing &amp; order</a>
 </div>
 </main>
-<script defer src="/_vercel/insights/script.js"></script>
+<script type="module">
+  import { inject } from '/vercel-analytics.js';
+  inject();
+</script>
 </body>
 </html>

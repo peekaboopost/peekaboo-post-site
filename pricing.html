@@ -107,6 +107,9 @@
   <p class="fineprint">© 2026 Peekaboo Post. All rights reserved.</p>
 </footer>
 <script src="/order-links.js"></script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script type="module">
+  import { inject } from '/vercel-analytics.js';
+  inject();
+</script>
 </body>
 </html>

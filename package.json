@@ -1,0 +1,25 @@
+{
+  "name": "peekaboo-post-site",
+  "version": "1.0.0",
+  "description": "Interactive digital invitations that guests love to open. Tap, peek, party!",
+  "main": "order-links.js",
+  "scripts": {
+    "build": "npm run copy-analytics",
+    "copy-analytics": "cp node_modules/@vercel/analytics/dist/index.mjs ./vercel-analytics.js",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peekaboopost/peekaboo-post-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peekaboopost/peekaboo-post-site/issues"
+  },
+  "homepage": "https://github.com/peekaboopost/peekaboo-post-site#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

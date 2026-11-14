@@ -330,6 +330,9 @@ thanksText: yes ? 'You’re bringing: ' + (claimed ? claimed.label.toLowerCase()
 }
 </script>
 <script src="/invites/invite.js"></script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script type="module">
+  import { inject } from '/vercel-analytics.js';
+  inject();
+</script>
 </body>
 </html>
