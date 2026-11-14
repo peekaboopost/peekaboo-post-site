@@ -159,6 +159,9 @@
 </footer>
 
 <script src="/script.js" defer></script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script type="module">
+  import { inject } from '/vercel-analytics.js';
+  inject();
+</script>
 </body>
 </html>
